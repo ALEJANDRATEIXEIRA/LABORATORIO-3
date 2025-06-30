@@ -1,0 +1,277 @@
+/*para la pagina en general*/
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #a4c2fa;
+    color: #332a5f;
+}
+
+.revista-lista {
+    text-align: center;
+    list-style-type: none; /* Sin números en la lista */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    border: 3px solid rgb(26, 26, 65);
+    box-sizing: border-box;
+}
+
+/*para la lista desordenada*/
+.revista-lista ul {
+    list-style-type: disc; /* Muestra puntos en la lista interna */
+    padding-left: 20px;
+}
+
+.revista-lista ul li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* para el header */
+header {
+    background-color: #251f5b;
+    color: #e0e3ff;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em; /* Usando em para tamaño de fuente relativo */
+}
+
+header p {
+    line-height: 1.2; /* Ajustado line-height para mejor lectura */
+    margin: 10px 0 0;
+    font-weight: bold;
+}
+
+/* Para el navegador (ajustes para Bootstrap Navbar) */
+.navbar {
+    padding: 0 !important; /* Elimina padding por defecto de Bootstrap si no lo quieres */
+}
+
+.navbar-nav .nav-link {
+    color: #020101 !important; /* Sobrescribe color de enlace por defecto de Bootstrap */
+    font-weight: bold;
+    transition: color 0.3s;
+    padding: 10px 15px !important; /* Ajusta padding para enlaces */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #72ffd7 !important; /* Color al pasar el ratón */
+}
+
+/* Para el main (usamos .container de Bootstrap) */
+main.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* articulos y para el aside (ahora gestionados con grillas de Bootstrap) */
+/* Los estilos de article y aside directos se moverán a las cards si es el caso, o se mantendrán para el aside no-card */
+aside > div { /* Contenedor interno del aside para aplicar los estilos */
+    padding: 15px;
+    background-color: #dceaff;
+    border: 3px solid #190a59;
+    border-radius: 5px;
+    height: 100%; /* Para que las columnas tengan la misma altura */
+}
+
+
+article h2, aside h2 {
+    color: #1c1b4f;
+    border-bottom: 2px solid #fedf13;
+    padding-bottom: 5px;
+    font-size: 1.8em; /* Ajuste de tamaño de fuente relativo */
+}
+
+img {
+    display: block;
+    margin: 15px auto;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ffcc00;
+}
+
+/* Estilos para Bootstrap Cards en artículos */
+.card-img-top {
+    border-radius: 5px; /* Bordes de la imagen dentro de la card */
+    border: 2px solid #ffcc00; /* Borde de la imagen */
+    object-fit: cover; /* Para asegurar que la imagen cubra el área */
+}
+
+.card-body .card-title {
+    color: #1c1b4f;
+    border-bottom: 2px solid #fedf13;
+    padding-bottom: 5px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #082966;
+    color: #ffffff;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+footer h2 {
+    color: #ffcc00;
+    font-size: 1.5em;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 0.95em;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Definitions */
+dl {
+    background-color: #303f92;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+dt {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+/* Media Content (usamos ratio de Bootstrap para iframes/videos) */
+.ratio { /* Bootstrap ya lo maneja bien */
+    border: 2px solid #ffcc00;
+    border-radius: 5px;
+    overflow: hidden; /* Asegura que el contenido respete el border-radius */
+}
+
+figure {
+    text-align: center;
+    margin: 20px auto;
+}
+
+figcaption {
+    font-style: italic;
+    margin-top: 10px;
+    color: #18183b;
+}
+
+/* Botón flotante en la parte inferior derecha */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chat-button button {
+    background-color: #e395f9;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.chat-button button:hover {
+    background-color: #5e0171fb;
+}
+
+
+/* Media Queries (generalmente Bootstrap maneja gran parte, pero podemos ajustar aún más) */
+
+/* Teléfonos (menos de 768px, ya que Bootstrap usa 768px como breakpoint md) */
+@media (max-width: 767.98px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    /* Navbar se colapsa automáticamente en móvil */
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+
+    .revista-lista {
+        padding: 10px;
+    }
+
+    .card-img-top {
+        margin: 10px auto;
+    }
+
+    aside > div {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    dl {
+        padding: 8px;
+    }
+
+    dt {
+        font-size: 1em;
+    }
+
+    dd {
+        font-size: 0.85em;
+    }
+
+    .chat-button {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .chat-button button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Tablets (entre 768px y 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0 8px;
+    }
+
+    .card-img-top {
+        max-height: 200px; /* Limita la altura de las imágenes en cards en tablets */
+        object-fit: cover;
+    }
+}

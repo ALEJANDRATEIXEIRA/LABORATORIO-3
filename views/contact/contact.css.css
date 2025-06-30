@@ -1,0 +1,138 @@
+/* Restablecemos el box-sizing global para estar seguros */
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #a4c2fa;
+    text-align: center;
+}
+
+header {
+    background-color: #251f5b;
+    color: #e0e3ff;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+/* Ajustes para el navbar de Bootstrap (aunque ahora vienen de common.css, los mantengo aquí si fueran necesarios overrides específicos) */
+/* .navbar {
+    padding: 0 !important;
+}
+
+.navbar-nav .nav-link {
+    color: #020101 !important;
+    font-weight: bold;
+    transition: color 0.3s;
+    padding: 10px 15px !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #72ffd7 !important;
+} */
+
+/* Formulario (ajustes para clases de Bootstrap) */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #e3e6fb;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 90%;
+    /* Padding ya se aplicó en el HTML inline para fieldset */
+}
+
+fieldset {
+    border: 3px solid #262245;
+    border-radius: 10px;
+    padding: 30px; /* Mantener padding original */
+}
+
+legend {
+    font-weight: bold;
+    color: #152231;
+    font-size: 1.2em;
+    /* Las clases de Bootstrap ya ayudan con el flotado y el padding */
+}
+
+.form-label { /* Clase de Bootstrap para labels */
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 1em;
+    color: #261842;
+}
+
+.form-control { /* Clase de Bootstrap para inputs/textareas */
+    border: 1px solid #2d2755;
+    border-radius: 4px;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff3f3;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #f3ffbf;
+    outline: none;
+    box-shadow: 0 0 8px rgb(231, 228, 131);
+}
+
+.btn-primary { /* Clase de Bootstrap para botones primarios */
+    background-color: #272349 !important; /* Sobrescribe color de Bootstrap */
+    color: white !important;
+    padding: 10px 15px !important;
+    margin-top: 10px !important;
+    border: none !important;
+    border-radius: 4px !important;
+    cursor: pointer;
+    font-size: 16px;
+    width: auto;
+}
+
+.btn-primary:hover {
+    background-color: #456595 !important;
+}
+
+/* Media Queries */
+@media (max-width: 767.98px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    /* .navbar-nav {
+        align-items: center;
+    } */
+
+    form {
+        padding: 10px;
+        width: 95%;
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    form {
+        width: 80%;
+    }
+}
